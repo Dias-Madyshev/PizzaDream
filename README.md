@@ -39,14 +39,15 @@
 
 ## 📦 Установка и запуск
 ![image](https://github.com/user-attachments/assets/042a8444-dfa7-4d68-896b-c136cbe5b7cc)
-![image](https://github.com/user-attachments/assets/15ad0cf7-c9bd-4e22-8f26-d29d3b1dd967)
+![image](https://github.com/user-attachments/assets/0f6422ee-ab9f-4526-9401-f4627736283a)
+
 
 
 
 
 
 ```bash
-git clone https://github.com/your-username/react-pizza
+https://github.com/Dias-Madyshev/PizzaDream.git
 cd react-pizza
 npm install
 npm start
