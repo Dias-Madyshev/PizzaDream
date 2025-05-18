@@ -92,6 +92,12 @@ body {
   &--cart {
     max-width: 820px;
     margin: 90px auto;
+
+    @media (max-width: 600px) {
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
     .content__title {
       margin: 0;
     }
@@ -103,6 +109,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   .content__title {
@@ -110,12 +121,22 @@ body {
     align-items: center;
     font-size: 32px;
 
+    @media (max-width: 600px) {
+      font-size: 22px;
+    }
+
     svg {
       position: relative;
       top: -2px;
       width: 30px;
       height: 30px;
       margin-right: 10px;
+
+      @media (max-width: 600px) {
+        width: 22px;
+        height: 22px;
+      }
+
       path {
         stroke: $black;
         stroke-width: 1.9;
@@ -134,6 +155,10 @@ body {
       margin-left: 7px;
       color: #b6b6b6;
       font-size: 18px;
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
     }
 
     span,
@@ -165,15 +190,30 @@ body {
     padding-top: 30px;
     margin-top: 30px;
 
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+
     &-img {
       display: flex;
       align-items: center;
       margin-right: 15px;
       width: 10%;
 
+      @media (max-width: 600px) {
+        width: 25%;
+      }
+
       img {
         width: 80px;
         height: 80px;
+
+        @media (max-width: 600px) {
+          width: 60px;
+          height: 60px;
+        }
       }
     }
 
@@ -183,16 +223,29 @@ body {
       justify-content: center;
       width: 40%;
 
+      @media (max-width: 600px) {
+        width: 70%;
+      }
+
       h3 {
         font-weight: bold;
         font-size: 22px;
         line-height: 27px;
         letter-spacing: 0.01em;
+
+        @media (max-width: 600px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
 
       p {
         font-size: 18px;
         color: #8d8d8d;
+
+        @media (max-width: 600px) {
+          font-size: 13px;
+        }
       }
     }
 
@@ -202,16 +255,19 @@ body {
       justify-content: space-between;
       width: 13%;
 
-      &-minus {
-        svg {
-          path:first-of-type {
-            display: none;
-          }
-        }
+      @media (max-width: 600px) {
+        width: 45%;
+        margin-top: 15px;
+        justify-content: flex-start;
+        gap: 10px;
       }
 
       b {
         font-size: 22px;
+
+        @media (max-width: 600px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -221,10 +277,20 @@ body {
       justify-content: center;
       width: 33%;
 
+      @media (max-width: 600px) {
+        width: 45%;
+        margin-top: 15px;
+        justify-content: flex-end;
+      }
+
       b {
         font-weight: bold;
         font-size: 22px;
         letter-spacing: 0.01em;
+
+        @media (max-width: 600px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -234,29 +300,9 @@ body {
       justify-content: flex-end;
       width: 4%;
 
-      .button {
-        border-color: darken($color: $gray-line, $amount: 10);
-      }
-
-      svg {
-        transform: rotate(45deg);
-
-        path {
-          fill: darken($color: $gray-line, $amount: 15);
-        }
-      }
-
-      .button {
-        svg {
-          width: 11.5px;
-          height: 11.5px;
-          position: relative;
-        }
-        &:hover,
-        &:active {
-          border-color: darken($color: $gray-line, $amount: 80);
-          background-color: darken($color: $gray-line, $amount: 80);
-        }
+      @media (max-width: 600px) {
+        width: 10%;
+        margin-top: 15px;
       }
     }
   }
@@ -264,12 +310,25 @@ body {
   &__bottom {
     margin: 50px 0;
 
+    @media (max-width: 600px) {
+      margin: 25px 0;
+    }
+
     &-details {
       display: flex;
       justify-content: space-between;
 
+      @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 12px;
+      }
+
       span {
         font-size: 22px;
+
+        @media (max-width: 600px) {
+          font-size: 16px;
+        }
 
         &:last-of-type {
           b {
@@ -284,17 +343,27 @@ body {
       justify-content: space-between;
       margin-top: 40px;
 
+      @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
       .go-back-btn {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 210px;
 
+        @media (max-width: 600px) {
+          width: 100%;
+          order: 2;
+        }
+
         border-color: darken($color: $gray-line, $amount: 10);
 
         span {
           color: darken($color: $gray-line, $amount: 20);
-          font-weight: 500;
           font-weight: 600;
         }
 
@@ -321,6 +390,13 @@ body {
         font-weight: 600;
         width: 210px;
         padding: 16px;
+
+        @media (max-width: 600px) {
+          width: 100%;
+          order: 1;
+          padding: 12px;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -330,10 +406,20 @@ body {
     width: 600px;
     text-align: center;
 
+    @media (max-width: 600px) {
+      width: 100%;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
     h2 {
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 10px;
+
+      @media (max-width: 600px) {
+        font-size: 22px;
+      }
     }
 
     p {
@@ -341,17 +427,21 @@ body {
       line-height: 145.4%;
       letter-spacing: 0.01em;
       color: #777777;
-    }
 
-    icon {
-      position: relative;
-      top: 2px;
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
     }
 
     img {
       display: block;
       width: 300px;
       margin: 45px auto 60px;
+
+      @media (max-width: 600px) {
+        width: 70%;
+        margin: 25px auto 30px;
+      }
     }
 
     .button--black {
@@ -360,6 +450,12 @@ body {
       margin: 0 auto;
       font-weight: 600;
       font-size: 18px;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0;
+      }
     }
   }
 }
