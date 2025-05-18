@@ -1,5 +1,5 @@
 import React from 'react'
-import emptyImage from '../assets/empty-cart.png'
+import cartEmpty from '../assets/img/empty-cart.png'
 
 const CartEmpty: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const CartEmpty: React.FC = () => {
         <br />
         Для того, чтобы заказать пиццу, перейди на главную страницу.
       </p>
-      <img src={emptyImage} alt="Empty cart" />
+      <img src={cartEmpty} alt="Empty cart" />
       <a href="/" className="button button--black">
         <span>Вернуться назад</span>
       </a>
