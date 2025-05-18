@@ -17,16 +17,22 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
   const pageCount = Math.ceil(totalItems / itemsPerPage)
 
+  const handlePageChange = (selectedItem: { selected: number }) => {
+    onChangePage(selectedItem.selected + 1)
+  }
+
   return (
     <ReactPaginate
       className={styles.root}
       breakLabel="..."
       nextLabel=">"
       previousLabel="<"
-      onPageChange={event => onChangePage(event.selected + 1)}
+      onPageChange={handlePageChange}
       pageRangeDisplayed={4}
+      marginPagesDisplayed={1}
       pageCount={pageCount}
       forcePage={currentPage - 1}
+      renderOnZeroPageCount={null}
     />
   )
 }

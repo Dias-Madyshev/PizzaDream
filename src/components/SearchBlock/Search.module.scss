@@ -1,39 +1,79 @@
 .root {
   position: relative;
   margin-left: -120px;
+  margin-top: 10px;
+
+  @media (max-width: 645px) {
+    margin-left: 0;
+  }
+
+  @media (max-width: 390px) {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
 }
 
 .input {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 12px 20px;
-  padding-left: 42px;
-  width: 400px;
-  border-radius: 10px;
-  font-size: 16px;
+  padding: 8px 16px;
+  padding-left: 36px;
+  width: 300px;
+  border-radius: 8px;
+  font-size: 14px;
   transition: all 0.15s ease-in-out;
+
+  @media (max-width: 645px) {
+    width: 100%;
+    min-width: 200px;
+  }
+
+  @media (max-width: 390px) {
+    width: 100%;
+    padding: 6px 30px;
+    font-size: 12px;
+    border-radius: 6px;
+    background: #f9f9f9;
+  }
 
   &:focus {
     border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #ffffff;
   }
 }
 
 .icon {
-  width: 22px;
-  height: 22px;
-  opacity: 0.3;
-  position: absolute;
-  left: 14px;
-  top: 12px;
-}
-
-.clearIcon {
   width: 18px;
   height: 18px;
   opacity: 0.3;
   position: absolute;
-  right: 15px;
-  top: 15px;
+  left: 12px;
+  top: 10px;
+
+  @media (max-width: 390px) {
+    width: 14px;
+    height: 14px;
+    left: 16px;
+    top: 8px;
+  }
+}
+
+.clearIcon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+  position: absolute;
+  right: 12px;
+  top: 12px;
   cursor: pointer;
+
+  @media (max-width: 390px) {
+    width: 12px;
+    height: 12px;
+    right: 16px;
+    top: 9px;
+  }
 
   &:hover {
     opacity: 0.8;
