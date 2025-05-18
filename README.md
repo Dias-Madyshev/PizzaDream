@@ -49,8 +49,3 @@ cd react-pizza
 npm install
 npm start
 
-```bash
-https://github.com/Dias-Madyshev/PizzaDream.git
-cd react-pizza
-npm install
-npm start
