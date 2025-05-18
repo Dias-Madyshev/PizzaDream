@@ -37,9 +37,18 @@
 
 ---
 
-## 📦 Установка и запуск
+
 ![image](https://github.com/user-attachments/assets/042a8444-dfa7-4d68-896b-c136cbe5b7cc)
 ![image](https://github.com/user-attachments/assets/85b1f1c4-f321-495d-bb66-511724b7392a)
+
+## 📦 Установка и запуск
+
+```bash
+https://github.com/Dias-Madyshev/PizzaDream.git
+cd react-pizza
+npm install
+npm start
+
 
 
 
