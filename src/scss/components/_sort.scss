@@ -50,3 +50,20 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .sort__popup {
+    min-width: unset;
+    width: 70vw;
+
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  .sort__popup ul li {
+    padding: 12px 10px;
+    word-break: break-word;
+    font-size: 16px;
+  }
+}
