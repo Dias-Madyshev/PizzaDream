@@ -8,13 +8,13 @@ import { Routes, Route } from 'react-router-dom'
 import Cart from './Pages/Cart'
 
 function App() {
-  const [searchInput, setSeatchInput] = React.useState('')
   return (
     <div className="wrapper">
-      <Header searchInput={searchInput} setSeatchInput={setSeatchInput} />
+      <Header />
+
       <div className="content">
         <Routes>
-          <Route path="/" element={<Home searchInput={searchInput} />} />
+          <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>

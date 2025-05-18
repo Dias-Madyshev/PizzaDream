@@ -1,25 +1,31 @@
 import React from 'react'
-import logoPizza from '../assets/img/pizza-logo.svg'
+import logoSvg from '../assets/img/pizza-logo.svg'
 import { Link } from 'react-router-dom'
 import SearchBlock from './SearchBlock'
+import { useSelector } from 'react-redux'
+import { selectCart } from '../redux/cartSlice'
 
-export default function Header({ searchInput, setSeatchInput }) {
+const Header: React.FC = () => {
+  const { totalPrice, items } = useSelector(selectCart)
+  const totalCount = items.reduce((sum: number, item) => sum + item.count, 0)
+
   return (
     <div className="header">
       <div className="container">
         <Link to="/">
           <div className="header__logo">
-            <img width="38" src={logoPizza} alt="Pizza logo" />
+            <img width="38" src={logoSvg} alt="Pizza logo" />
             <div>
-              <h1>Pizza Dream</h1>
+              <h1>React Pizza</h1>
               <p>самая вкусная пицца во вселенной</p>
             </div>
           </div>
         </Link>
-        <SearchBlock searchInput={searchInput} setSeatchInput={setSeatchInput} />
+
+        <SearchBlock />
         <div className="header__cart">
           <Link to="/cart" className="button button--cart">
-            <span>520 ₽</span>
+            <span>{totalPrice} ₸</span>
             <div className="button__delimiter"></div>
             <svg
               width="18"
@@ -49,10 +55,12 @@ export default function Header({ searchInput, setSeatchInput }) {
                 strokeLinejoin="round"
               />
             </svg>
-            <span>3</span>
+            <span>{totalCount}</span>
           </Link>
         </div>
       </div>
     </div>
   )
 }
+
+export default Header

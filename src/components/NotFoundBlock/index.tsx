@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './NotFoundBlock.module.scss'
 
-export default function index() {
+const index = () => {
   return (
-    <div className={styles.root}ё>
+    <div className={styles.root}>
       <h1>
         <span>😕</span>
         <br />
@@ -13,3 +13,4 @@ export default function index() {
     </div>
   )
 }
+export default index
