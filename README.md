@@ -39,7 +39,8 @@
 
 ## 📦 Установка и запуск
 ![image](https://github.com/user-attachments/assets/042a8444-dfa7-4d68-896b-c136cbe5b7cc)
-![image](https://github.com/user-attachments/assets/0f6422ee-ab9f-4526-9401-f4627736283a)
+![image](https://github.com/user-attachments/assets/509fdbf7-2457-4c3c-8163-ccff8b17de0e)
+
 
 
 
